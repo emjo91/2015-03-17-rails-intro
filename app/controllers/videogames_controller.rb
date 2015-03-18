@@ -30,8 +30,10 @@ class VideogamesController < ApplicationController
   
   
   # This will delete the product.
-  def delete
+  # This is working.
+  def delete_confirm
     @videogame = Videogame.find(params[:id]).destroy
+    redirect_to controller: "videogames", action: "show_all"
   end
   
   

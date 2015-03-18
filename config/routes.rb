@@ -6,12 +6,17 @@ RailsFails::Application.routes.draw do
   # seems to be working.
   get "create" => 'videogames#create'
   
-  # Not sure if this will work...
-  # Not showing up in browser, but showing up in console.
+  # This is working.
   post "save" => 'videogames#save'
   
+  # This is working.
+  get "videogames/:id" => 'videogames#find'
+  
   # Not sure if this will work...
-  get "videogames/:id" => "videogames#find"
+  get "delete" => 'videogames#delete'
+  
+  # Not sure if this will work...
+  post "delete_confirm" => 'videogames#delete_confirm'
   
   
   # The priority is based upon order of creation:
