@@ -12,11 +12,20 @@ RailsFails::Application.routes.draw do
   # This is working.
   get "videogames/:id" => 'videogames#find'
   
-  # Not sure if this will work...
+  # This is working.
   get "delete" => 'videogames#delete'
   
-  # Not sure if this will work...
+  # This is working.
   post "delete_confirm" => 'videogames#delete_confirm'
+  
+  # Not sure if this will work...
+  get "edit" => 'videogames#edit'
+  
+  # Not sure if this will work...
+  post "edit_confirm" => 'videogames#update'
+  
+  # Not sure if this will work...
+  get "home" => 'videogames#home'
   
   
   # The priority is based upon order of creation:

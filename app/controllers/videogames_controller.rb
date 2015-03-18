@@ -17,7 +17,6 @@ class VideogamesController < ApplicationController
     new_videogame = Videogame.create({title: params[:title], 
                                     genre: params[:genre], 
                                     rating: params[:rating]})
-    # new_videogame.save
     redirect_to controller: "videogames", action: "show_all"
   end
   
@@ -37,5 +36,15 @@ class VideogamesController < ApplicationController
   end
   
   
+  # This updates a record
+  # This works, but seems to move the product down to the bottom of the list? But still has the same id...soooooo..idk.
+  def update
+    @videogame = Videogame.find(params[:id])
+    @videogame.update_attributes(title: params[:title],
+                                 genre: params[:genre],
+                                 rating: params[:rating])
+
+    redirect_to controller: "videogames", action: "show_all"
+  end
   
 end
