@@ -1,4 +1,114 @@
+/* Colours HEXCODES: 
+body: #F2EBBF
+content: #8CBEB2
+header: #5C4B51
+text: #5C4B51
+accent 1: #F06060
+accent 2: #F3B562
+*/
+
+/* This is for MOBILE FIRST */
+
+/* General Reset */
+
 * {
   margin: 0 auto;
+}
+
+body {
+/*  background: #F2EBBF;*/
+  background-image:url('/assets/background.jpg');
+}
+
+/* Classes */
+
+.content {
+  width: 80%;
+  margin: 20px 10%;
+  background: #8CBEB2;
+  box-shadow: 5px 5px 5px #c7c091;
+}
+
+.content-restrain {
+  width: 90%;
+  padding: 20px 5%;
+}
+
+/* Text Styling */
+
+h1 {
+  color: #5C4B51;
+  size: 100%;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #2F3837;
+  margin: 0 0 20px 0;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+p {
+  color: #5C4B51;
+  size: 100%;
+  font-family: sans-serif;
+  padding: 10px 0 0 0;
+  margin: 0 2.5%;
+}
+
+/* Navs */
+
+nav ul {
   padding: 0;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px 3%;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: sans-serif;
+  color: #5C4B51;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Form Data */
+
+input {
+  padding: 10px;
+  border-width: 0px;
+  box-shadow: ;
+  width: 90%;
+  margin: 0 2.5%;
+  box-shadow: 2px 2px 3px #71AEBE;
+  max-width: 350px;
+}
+
+input:hover {
+  background: #F3B562;
+}
+
+input#sub {
+  width: 150px;
+}
+
+input#sub:hover {
+  background: #F06060;
+}
+
+/* Links */
+a.go-home {
+  width: 100px;
+  display: block;
+  padding: 10px 20px;
+  background: #F06060;
+  margin: 40px 0 0 0;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #5C4B51;
 }
