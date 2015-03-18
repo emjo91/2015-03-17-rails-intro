@@ -1,4 +1,14 @@
 RailsFails::Application.routes.draw do
+  
+  # This is working.
+  get "videogames" => 'videogames#show_all'
+  
+  # seems to be working.
+  get "create" => 'videogames#create'
+  
+  # Not sure if this will work...
+  post "save" => 'videogames#save'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
