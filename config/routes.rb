@@ -8,26 +8,22 @@ RailsFails::Application.routes.draw do
   # get "create" => 'videogames#create'
   
   # This is working.
-  post "save" => 'videogames#save'
+  # post "save" => 'videogames#save'
   
   # This is working.
   # get "videogames/:id" => 'videogames#find'
   
   # This is working.
-  get "delete" => 'videogames#delete'
+  # get "delete" => 'videogames#delete'
   
   # This is working.
-  post "delete_confirm" => 'videogames#delete_confirm'
+  # post "delete_confirm" => 'videogames#delete_confirm'
   
   # Working
-  get "edit" => 'videogames#edit'
+  # get "edit" => 'videogames#edit'
   
   # Working
-  post "edit_confirm" => 'videogames#update'
-  
-  # Working
-  get "home" => 'videogames#home'
-  
+  # post "edit_confirm" => 'videogames#update'
   
   
   
@@ -54,6 +50,9 @@ RailsFails::Application.routes.draw do
   
   # This deletes the videogame. - WORKING
   delete "/videogames/:id" => 'videogames#delete_confirm'
+  
+  # Working
+  get "home" => 'videogames#home'
   
   
   

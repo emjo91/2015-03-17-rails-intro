@@ -1,21 +1,6 @@
 <h1>Edit Videogames</h1>
 
-<!-- OLD FORM -->
-
-<!-- <form action="/edit_confirm" method="post">
-  <p>ID:</p>
-  <input name="id">
-  <p>Title:</p>
-  <input name="title">
-  <p>Genre:</p>
-  <input name="genre">
-  <p>Rating:</p>
-  <input name="rating">
-  <br><br>
-  <input type="submit" id="sub">
-</form> -->
-
-<!-- Right now it's only going to post...with the action of update -->
+<!-- New Form -->
 <%= form_for @videogame, :url => { :action => "update", :via => :put} do |f| %>
 <p><%= f.label "title" %></p>
 <%= f.text_field ("title") %>

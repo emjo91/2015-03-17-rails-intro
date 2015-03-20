@@ -1,6 +1,8 @@
 <h1>All Videogames</h1>
 <% @videogames.each do |videogames| %>
   <p><%= videogames.id %>. <%= videogames.title %></p>
+  <%= link_to "#{videogames.title}", "/videogames/#{videogames.id}" %>
 <% end %>
+
 
 <center><a href="/home" class="go-home">Go back home</a></center>

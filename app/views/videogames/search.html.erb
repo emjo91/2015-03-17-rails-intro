@@ -1,5 +1,12 @@
-<form action>
-  
-</form>
+<%= form_for @videogame, :url => { :action => "update", :via => :put} do |f| %>
+<p><%= f.label "title" %></p>
+<%= f.text_field ("title") %>
+<p><%= f.label "genre_id" %></p>
+<%= f.text_field ("genre_id") %>
+<p><%= f.label "rating_id" %></p>
+<%= f.text_field ("rating_id") %>
+<br><br>
+<%= f.submit %>
+<% end %>  
 
 <center><a href="/home" class="go-home">Go back home</a></center>
