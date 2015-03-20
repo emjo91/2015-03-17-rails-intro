@@ -1,16 +1,17 @@
 RailsFails::Application.routes.draw do
   
+  # OLD ROUTES
   # This is working.
-  get "videogames" => 'videogames#show_all'
+  # get "videogames" => 'videogames#show_all'
   
   # seems to be working.
-  get "create" => 'videogames#create'
+  # get "create" => 'videogames#create'
   
   # This is working.
   post "save" => 'videogames#save'
   
   # This is working.
-  get "videogames/:id" => 'videogames#find'
+  # get "videogames/:id" => 'videogames#find'
   
   # This is working.
   get "delete" => 'videogames#delete'
@@ -18,14 +19,43 @@ RailsFails::Application.routes.draw do
   # This is working.
   post "delete_confirm" => 'videogames#delete_confirm'
   
-  # Not sure if this will work...
+  # Working
   get "edit" => 'videogames#edit'
   
-  # Not sure if this will work...
+  # Working
   post "edit_confirm" => 'videogames#update'
   
-  # Not sure if this will work...
+  # Working
   get "home" => 'videogames#home'
+  
+  
+  
+  
+  # New RESTful routes - correct routes
+  
+  
+  # This is the INDEX. - WORKING
+  get "/videogames" => 'videogames#show_all', as: "videogame"
+  
+  # This shows the form for creating a new videogame. - WORKING
+  get "/videogames/new" => 'videogames#create', as: "new_videogame"
+  
+  # This saves the form data, no route name.
+  post "/videogames" => 'videogames#save'
+  
+  # This shows the edit form. - WORKING - The path itself is working.
+  get "/videogames/:id/edit" => 'videogames#edit', as: "edit_videogame_id"
+  
+  # This updates the record and saves the edit form data, not sure if I can have videogame as title. 
+  put "/videogames/:id" => 'videogames#update'
+  
+  # This shows the data for a given record.
+  get "/videogames/:id" => 'videogames#find'
+  
+  # This deletes the videogame. - WORKING
+  delete "/videogames/:id" => 'videogames#delete_confirm'
+  
+  
   
   
   # The priority is based upon order of creation:

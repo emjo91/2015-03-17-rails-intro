@@ -2,7 +2,11 @@
 
 <p>ID: <%= @videogame.id %></p>
 <p>Title: <%= @videogame.title %></p>
-<p>Genre: <%= @videogame.genre %></p>
-<p>Rating: <%= @videogame.rating %></p>
+<p>Genre: <%= @videogame.genre_id %></p>
+<p>Rating: <%= @videogame.rating_id %></p>
 
-<a href="/home">Go back home</a>
+<center><a href="/home" class="go-home">Go back home</a></center>
+
+<!-- Both of these links are working -->
+<%= link_to "Delete", "/videogames/#{params[:id]}", :method => :delete %>
+<%= link_to "Edit", "/videogames/#{params[:id]}/edit" %>
